@@ -1,0 +1,80 @@
+// MAIN FONT/COLORS
+$mainfont: 'Gilroy-Light';
+$mainsize: 16px;
+$maincolor: #000;
+// MAIN FONT/COLORS
+// CONTAINER
+$minwidth: 320px;
+$mw: 1050;
+$md1: $mw+12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
+// CONTAINER
+// Global Commands
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $mainfont, sans-serif;
+    font-size: $mainsize;
+    color: $maincolor;
+    overflow-x: hidden;
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: $mw+px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+}
+
+// Global Commands
