@@ -1,0 +1,50 @@
+.intro {
+    height: 100%;
+    .swiper {
+        position: relative;
+        height: 500px;
+        .swiper-wrapper {
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 15px;
+                h2 {
+                    max-width: 400px;
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 38px;
+                    color: $darkcolor;
+                }
+                p {
+                    max-width: 400px;
+                    font-size: 13px;
+                    line-height: 18px;
+                    color: #444444;
+                }
+                .green-btn {
+                    width: 160px;
+                    padding: 15px 30px;
+                    border-radius: 100px;
+                    background-color: $darkgreen;
+                    font-weight: 900;
+                    font-size: 13px;
+                    line-height: 15px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+        .swiper-button-prev {
+            left: 75px;
+        }
+        .swiper-button-next {
+            right: 75px;
+            transform: rotate(180deg);
+        }
+        .main-swiper__arrows {
+            &::after {
+                content: url('../img/main-slider-arrow.svg');
+            }
+        }
+    }
+}

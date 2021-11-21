@@ -3,20 +3,57 @@
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Nova Imobil - Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 
+    @@include('components/_header.html')
 
+    <section class="intro" style="background: url(./img/main-slider1.jpg) 50% 50% / cover no-repeat;">
+        <div class="swiper mainSwiper">
+            <div class="swiper-wrapper container">
+                <div class="swiper-slide">
+                    <h2>Nova Imobil îți oferă spații locative și comerciale</h2>
+                    <p>
+                        Noi îți oferim calitate, accesibilitate și libertate. La procurarea sau închirierea unui apartament de către clienții noi, oferim 10% reducere la prima achitare.
+                    </p>
+                    <a class="green-btn" href="#">VEZI OFERTELE</a>
+                </div>
+                <div class="swiper-slide">
+                    <h2>Nova Imobil îți oferă spații locative și comerciale</h2>
+                    <p>
+                        Noi îți oferim calitate, accesibilitate și libertate. La procurarea sau închirierea unui apartament de către clienții noi, oferim 10% reducere la prima achitare.
+                    </p>
+                    <a class="green-btn" href="#">VEZI OFERTELE</a>
+                </div>
+            </div>
+            <div class="main-swiper__arrows swiper-button-next"></div>
+            <div class="main-swiper__arrows swiper-button-prev"></div>
+        </div>
+    </section>
 
+    <div class="categories">
+        <div class="categories-body">
+            <div class="categories-card">
 
+            </div>
+            <div class="categories-card">
 
+            </div>
+            <div class="categories-card">
 
+            </div>
+            <div class="categories-card">
 
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
