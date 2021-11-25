@@ -4,6 +4,7 @@ $mainsize: 16px;
 $maincolor: #000;
 $darkgreen: #1C8B82;
 $darkcolor: #212121;
+$lightgreen: #30D5C8;
 // MAIN FONT/COLORS
 // CONTAINER
 $minwidth: 320px;
@@ -77,6 +78,12 @@ a:active {
 button {
     outline: none;
     cursor: pointer;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 35px;
+    color: $darkcolor;
 }
 
 // Global Commands

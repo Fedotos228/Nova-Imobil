@@ -159,6 +159,95 @@ button {
   cursor: pointer;
 }
 
+h2 {
+  font-size: 30px;
+  line-height: 35px;
+  color: #212121;
+}
+
+.green-btn {
+  display: block;
+  max-width: 100%;
+  padding: 15px 30px;
+  border-radius: 100px;
+  background-color: #1C8B82;
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 15px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.transparent-btn {
+  display: block;
+  max-width: 100%;
+  padding: 15px 65px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 100px;
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 15px;
+  color: #FFFFFF;
+}
+
+.offers-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.offers-header .offer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 45px;
+}
+
+.offers-header .offer-links .offer-link {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  color: #1C8B82;
+}
+
+.offers-header .offer-links .offer-link.active {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  color: #212121;
+  border-bottom: 2px solid #212121;
+}
+
+.offers-header .offer-banner {
+  background-color: #30D5C8;
+  padding: 20px 75px;
+  -webkit-clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 0 54%);
+          clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 0 54%);
+}
+
+.offers-header .offer-banner p {
+  font-weight: bold;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: #444444;
+}
+
 .upper-header {
   background-color: #1C8B82;
 }
@@ -347,9 +436,7 @@ button {
 .intro .swiper .swiper-wrapper .swiper-slide h2 {
   max-width: 400px;
   font-weight: 700;
-  font-size: 32px;
   line-height: 38px;
-  color: #212121;
 }
 
 .intro .swiper .swiper-wrapper .swiper-slide p {
@@ -361,13 +448,8 @@ button {
 
 .intro .swiper .swiper-wrapper .swiper-slide .green-btn {
   width: 160px;
-  padding: 15px 30px;
-  border-radius: 100px;
-  background-color: #1C8B82;
-  font-weight: 900;
-  font-size: 13px;
-  line-height: 15px;
-  color: #FFFFFF;
+  -webkit-filter: drop-shadow(0px 8px 4px rgba(9, 156, 148, 0.45));
+          filter: drop-shadow(0px 8px 4px rgba(9, 156, 148, 0.45));
 }
 
 .intro .swiper .swiper-button-prev {
@@ -383,4 +465,279 @@ button {
 
 .intro .swiper .main-swiper__arrows::after {
   content: url("../img/main-slider-arrow.svg");
+}
+
+.categories {
+  position: relative;
+  -webkit-transform: translateY(-90px);
+      -ms-transform: translateY(-90px);
+          transform: translateY(-90px);
+  margin-bottom: -90px;
+  z-index: 3;
+}
+
+.categories .categories-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+
+.categories .categories-body h4 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+
+.categories .categories-body .categories-card {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.categories .categories-body .categories-card .categories-card__buttons {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.categories .categories-body .categories-card .categories-card__buttons .categories-green__btn {
+  width: 188px;
+  padding: 15px 70px;
+}
+
+.categories .categories-body .categories-card:hover .categories-card__buttons {
+  background-color: #2121215e;
+  opacity: 1;
+  visibility: visible;
+}
+
+.offers {
+  margin-top: 100px;
+}
+
+.offers .offers-body .offers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.offers .offers-body .offers-grid .offers-grid__item {
+  display: block;
+}
+
+.offers .offers-body .offers-grid .offers-grid__item img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.offers .offers-body .offers-grid .offers-grid__item h4 {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: #212121;
+  margin-bottom: 10px;
+}
+
+.offers .offers-body .offers-grid .offers-grid__item p {
+  font-size: 13px;
+  line-height: 19px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.offers .offers-body .offers-grid .offers-grid__item .item-info {
+  border-bottom: 1px solid #C4C4C4;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.offers .offers-body .offers-grid .offers-grid__item .item-info .grid-item__price {
+  font-family: Lucida;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: 0.05em;
+  color: #1C8B82;
+  margin-right: 10px;
+}
+
+.offers .offers-body .offers-grid .offers-grid__item .item-info .grid-item__size {
+  font-family: Lucida Bright;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  color: #444444;
+}
+
+.offers .offers-body .offers-grid .offers-grid__item .item-detail a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 141.9%;
+  color: #444444;
+}
+
+.offers .offers-body .offers-grid .offers-grid__item .item-detail a:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.offers .offers-body .view-more {
+  display: block;
+  margin: 65px auto;
+  width: 188px;
+  padding: 15px 20px;
+  -webkit-filter: drop-shadow(0px 8px 4px rgba(9, 156, 148, 0.45));
+          filter: drop-shadow(0px 8px 4px rgba(9, 156, 148, 0.45));
+}
+
+.services h2 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.services p {
+  font-size: 13px;
+  line-height: 150%;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 55px;
+}
+
+.services .services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px 30px;
+}
+
+.services .services-grid .services-grid__block {
+  text-align: center;
+}
+
+.services .services-grid .services-grid__block svg {
+  margin-bottom: 15px;
+}
+
+.services .services-grid .services-grid__block h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+  color: #212121;
+}
+
+.services .services-grid .services-grid__block p {
+  font-size: 13px;
+  line-height: 19px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 25px;
+}
+
+.services .services-grid .services-grid__block .services-btn {
+  width: 150px;
+  margin: 0 auto;
+  padding: 10px 50px;
+}
+
+.why-us {
+  margin: 100px 0;
+}
+
+.why-us h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.why-us .why-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+.why-us .why-body img {
+  width: 100%;
+}
+
+.why-us .why-body .why-content {
+  display: block;
+}
+
+.why-us .why-body .why-content .why-content__info h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000;
+}
+
+.why-us .why-body .why-content .why-content__info p {
+  font-size: 13px;
+  line-height: 18px;
+  color: #000;
+}
+
+.why-us .why-body .why-content .why-content__info:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.clients h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clients .clients-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }

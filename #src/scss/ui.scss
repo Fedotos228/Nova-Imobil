@@ -1,0 +1,65 @@
+.green-btn {
+    display: block;
+    max-width: 100%;
+    padding: 15px 30px;
+    border-radius: 100px;
+    background-color: $darkgreen;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 15px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.transparent-btn {
+    display: block;
+    max-width: 100%;
+    padding: 15px 65px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 100px;
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
+.offers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    .offer-links {
+        display: flex;
+        align-items: center;
+        gap: 45px;
+        .offer-link {
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 35px;
+            letter-spacing: 0.05em;
+            color: $darkgreen;
+            &.active {
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 35px;
+                letter-spacing: 0.05em;
+                color: #212121;
+                border-bottom: 2px solid $darkcolor;
+            }
+        }
+    }
+    .offer-banner {
+        background-color: $lightgreen;
+        padding: 20px 75px;
+        clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 0 54%);
+        p {
+            font-weight: bold;
+            line-height: 19px;
+            letter-spacing: 0.05em;
+            color: #444444;
+        }
+    }
+}
