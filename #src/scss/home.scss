@@ -259,5 +259,66 @@
     .clients-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px 30px;
+        .clients-grid__item {
+            display: flex;
+            gap: 25px;
+            img {
+                height: fit-content;
+            }
+        }
+        .client-item__info {
+            padding: 20px 40px;
+            background-color: #F5F5F5;
+            p,
+            b,
+            time {
+                font-size: 13px;
+                line-height: 19px;
+                letter-spacing: 0.05em;
+                color: $maincolor;
+                margin-bottom: 13px;
+            }
+            b,
+            time {
+                margin: 0;
+                display: block;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.statistics {
+    margin: 100px 0;
+    padding: 60px 0;
+    h3 {
+        color: $darkcolor;
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 55px;
+    }
+    &-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        &__item {
+            text-align: center;
+            h2 {
+                font-weight: bold;
+                font-size: 45px;
+                line-height: 53px;
+                color: $darkcolor;
+                margin-bottom: 15px;
+            }
+            span {
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 23px;
+                color: #212121;
+            }
+        }
     }
 }
