@@ -874,3 +874,89 @@ footer .footer-body .footer-menu .footer-column__list .footer-list__item a {
   line-height: 23px;
   color: #212121;
 }
+
+.services-details {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.services-details.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.services-details__body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 32px;
+  width: 664px;
+  background-color: #FFFFFF;
+}
+
+.services-details__body h2 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  color: #000;
+  margin-bottom: 65px;
+}
+
+.services-details__body .details-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+}
+
+.services-details__body .details-form input {
+  grid-column: 1 span;
+  padding: 15px 30px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: inherit;
+  outline: none;
+  -webkit-transition: .3;
+  -o-transition: .3;
+  transition: .3;
+}
+
+.services-details__body .details-form input::-webkit-input-placeholder {
+  color: #999191;
+}
+
+.services-details__body .details-form input::-moz-placeholder {
+  color: #999191;
+}
+
+.services-details__body .details-form input:-ms-input-placeholder {
+  color: #999191;
+}
+
+.services-details__body .details-form input::-ms-input-placeholder {
+  color: #999191;
+}
+
+.services-details__body .details-form input::placeholder {
+  color: #999191;
+}
+
+.services-details__body .details-form input:nth-child(3) {
+  grid-column: 2 span;
+}
+
+.services-details__body .details-form button {
+  width: 188px;
+  font-family: inherit;
+  outline: none;
+  border: none;
+}

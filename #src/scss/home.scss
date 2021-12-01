@@ -322,3 +322,61 @@
         }
     }
 }
+
+.services-details {
+    position: fixed;
+    inset: 0;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.22);
+    &.open {
+        opacity: 1;
+        visibility: visible;
+    }
+    &__body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 32px;
+        width: 664px;
+        background-color: #FFFFFF;
+        h2 {
+            text-align: left;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 35px;
+            color: $maincolor;
+            margin-bottom: 65px;
+        }
+        .details-form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 40px;
+            input {
+                grid-column: 1 span;
+                padding: 15px 30px;
+                font-size: 14px;
+                line-height: 18px;
+                font-family: inherit;
+                outline: none;
+                transition: .3;
+                &::placeholder {
+                    color: #999191;
+                }
+                &:nth-child(3) {
+                    grid-column: 2 span;
+                }
+            }
+            button {
+                width: 188px;
+                font-family: inherit;
+                outline: none;
+                border: none;
+            }
+        }
+    }
+}
