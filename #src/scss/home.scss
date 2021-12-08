@@ -44,7 +44,7 @@
 .categories {
     position: relative;
     transform: translateY(-90px);
-    margin-bottom: -90px;
+    margin-bottom: 10px;
     z-index: 3;
     .categories-body {
         display: flex;
@@ -89,81 +89,6 @@
                     visibility: visible;
                 }
             }
-        }
-    }
-}
-
-.offers {
-    margin-top: 100px;
-    .offers-body {
-        .offers-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            .offers-grid__item {
-                display: block;
-                img {
-                    width: 100%;
-                    margin-bottom: 15px;
-                }
-                h4 {
-                    font-weight: bold;
-                    font-size: 14px;
-                    line-height: 16px;
-                    letter-spacing: 0.05em;
-                    color: $darkcolor;
-                    margin-bottom: 10px;
-                }
-                p {
-                    font-size: 13px;
-                    line-height: 19px;
-                    color: $maincolor;
-                    margin-bottom: 10px;
-                }
-                .item-info {
-                    border-bottom: 1px solid #C4C4C4;
-                    padding-bottom: 10px;
-                    margin-bottom: 12px;
-                    .grid-item__price {
-                        font-family: Lucida;
-                        font-weight: 600;
-                        font-size: 25px;
-                        line-height: 29px;
-                        letter-spacing: 0.05em;
-                        color: #1C8B82;
-                        margin-right: 10px;
-                    }
-                    .grid-item__size {
-                        font-family: Lucida Bright;
-                        font-weight: 600;
-                        font-size: 20px;
-                        line-height: 24px;
-                        letter-spacing: 0.05em;
-                        color: #444444;
-                    }
-                }
-                .item-detail {
-                    a {
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                        font-weight: 500;
-                        font-size: 15px;
-                        line-height: 141.9%;
-                        color: #444444;
-                        &:not(:last-child) {
-                            margin-bottom: 10px;
-                        }
-                    }
-                }
-            }
-        }
-        .view-more {
-            display: block;
-            margin: 65px auto;
-            width: 188px;
-            padding: 15px 20px;
-            filter: drop-shadow(0px 8px 4px rgba(9, 156, 148, 0.45));
         }
     }
 }

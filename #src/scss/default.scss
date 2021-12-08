@@ -10,9 +10,9 @@ $lightgreen: #30D5C8;
 $minwidth: 320px;
 $mw: 1050;
 $md1: $mw+12;
-$md2: 992.98;
-$md3: 767.98;
-$md4: 479.98;
+$md2: 992.98px;
+$md3: 767.98px;
+$md4: 479.98px;
 // CONTAINER
 // Global Commands
 *,
@@ -43,6 +43,9 @@ body {
     max-width: $mw+px;
     margin: 0 auto;
     width: 100%;
+    @media(max-width: $md3) {
+        padding: 0 15px;
+    }
 }
 
 aside,
@@ -78,6 +81,8 @@ a:active {
 button {
     outline: none;
     cursor: pointer;
+    border: none;
+    background-color: transparent;
 }
 
 h2 {

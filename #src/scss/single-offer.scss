@@ -1,0 +1,178 @@
+.offer-single {
+    margin-top: 50px;
+    .offer-header {
+        display: flex;
+        gap: 30px;
+        &__details {
+            h4 {
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.05em;
+                color: $darkcolor;
+                margin-bottom: 10px;
+            }
+            h2 {
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 35px;
+                letter-spacing: 0.05em;
+                color: #333333;
+                margin-bottom: 15px;
+            }
+            p {
+                font-size: 14px;
+                line-height: 145%;
+                letter-spacing: 0.05em;
+                color: $maincolor;
+                margin-bottom: 30px;
+            }
+            .offer-info {
+                margin-bottom: 25px;
+                .offer-price {
+                    font-family: Lucida Bright;
+                    font-weight: 600;
+                    font-size: 45px;
+                    line-height: 53px;
+                    letter-spacing: 0.05em;
+                    color: #1C8B82;
+                    margin-right: 50px;
+                    sup {
+                        font-size: 30px;
+                    }
+                }
+                .offer-size {
+                    font-family: Lucida Bright;
+                    font-weight: 600;
+                    font-size: 45px;
+                    line-height: 53px;
+                    letter-spacing: 0.05em;
+                    color: #444444;
+                    sup {
+                        font-size: 30px;
+                    }
+                }
+            }
+            .offer-agent {
+                display: flex;
+                gap: 30px;
+                .offer-agent__detail {
+                    small {
+                        display: block;
+                        font-size: 14px;
+                        line-height: 16px;
+                        letter-spacing: 0.05em;
+                        color: $darkcolor;
+                        margin-bottom: 15px;
+                    }
+                    h2 {
+                        line-height: 35px;
+                        letter-spacing: 0.05em;
+                        color: $darkcolor;
+                        margin-bottom: 15px;
+                    }
+                    .agent-detail__btn {
+                        padding: 10px 30px;
+                        font-weight: bold;
+                        font-size: 15px;
+                        line-height: 18px;
+                        letter-spacing: 0.05em;
+                    }
+                }
+            }
+        }
+    }
+    .offer-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 50px 0;
+        .offer-options__item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-family: Roboto;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 15px;
+            color: #333333;
+        }
+    }
+    .offers-characteristics {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        .offers-characteristics__column {
+            &:first-child {
+                border-right: 1px solid #B1AEAE;
+                padding-right: 50px;
+            }
+            &:last-child {
+                padding-left: 50px;
+            }
+            .characteristics-column__table {
+                width: 225px;
+                tbody {
+                    tr {
+                        td {
+                            padding-bottom: 20px;
+                            font-size: 13px;
+                            line-height: 15px;
+                            color: #333333;
+                            &:first-child {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .offer-single__additional {
+        margin-bottom: 90px;
+        h2 {
+            font-family: Roboto;
+            color: #333333;
+            margin-bottom: 32px;
+        }
+        .additional-lists {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            .additional-list {
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    font-family: Roboto;
+                    font-size: 13px;
+                    line-height: 15px;
+                    color: #333333;
+                    margin-bottom: 17px;
+                    &::before {
+                        content: url('../img/check.svg');
+                    }
+                }
+            }
+        }
+        p {
+            font-family: Roboto;
+            font-size: 13px;
+            line-height: 145%;
+            color: $maincolor;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #B1AEAE;
+        }
+    }
+}
+
+.offer-similar {
+    margin-bottom: 100px;
+    h2 {
+        font-family: Roboto;
+        color: #333333;
+        margin-bottom: 30px;
+    }
+}
