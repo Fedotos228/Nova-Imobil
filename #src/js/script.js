@@ -100,3 +100,20 @@ burger.addEventListener('click', () => {
         }
     })
 })
+
+const filterItemControl = document.querySelectorAll('.filter-item__title')
+
+if (filterItemControl[0]) {
+    filterItemControl.forEach(control => {
+        control.addEventListener('click', () => {
+            control.classList.toggle('open')
+            control.nextElementSibling.classList.toggle('open')
+        });
+        const submenuItem = control.nextElementSibling.querySelectorAll('.submenu-list__item')
+        submenuItem.forEach(submenuItem => {
+            submenuItem.addEventListener('click', () => {
+                submenuItem.classList.toggle('active')
+            })
+        })
+    });
+}

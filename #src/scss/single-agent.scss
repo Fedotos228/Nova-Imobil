@@ -1,0 +1,55 @@
+.single-agent {
+    margin: 65px 0;
+    .single-agent__body {
+        display: flex;
+        gap: 30px;
+        .single-agent__aside {
+            height: 100%;
+            background-color: #F5F5F5;
+            .agent-aside__body {
+                display: block;
+                padding: 20px;
+                text-align: center;
+                img {
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 15px;
+                }
+                small {
+                    display: block;
+                    font-size: 14px;
+                    line-height: 16px;
+                    letter-spacing: 0.05em;
+                    color: #333333;
+                    margin-bottom: 15px;
+                }
+                h2 {
+                    font-weight: bold;
+                    color: #333333;
+                    margin-bottom: 15px;
+                }
+                a {
+                    display: block;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 19px;
+                    letter-spacing: 0.05em;
+                    color: $darkcolor;
+                    background-color: $darkgreen;
+                    padding: 10px;
+                    color: #FFFFFF;
+                    border-radius: 4px;
+                    &:first-of-type {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.agent-offers {
+    h2 {
+        margin-bottom: 30px;
+    }
+}
