@@ -8,7 +8,7 @@ $lightgreen: #30D5C8;
 // MAIN FONT/COLORS
 // CONTAINER
 $minwidth: 320px;
-$mw: 1050;
+$mw: 1050px;
 $md1: $mw+12;
 $md2: 992.98px;
 $md3: 767.98px;
@@ -40,10 +40,10 @@ body {
 }
 
 .container {
-    max-width: $mw+px;
+    max-width: $mw;
     margin: 0 auto;
     width: 100%;
-    @media(max-width: $md3) {
+    @media(max-width: $mw) {
         padding: 0 15px;
     }
 }
@@ -86,8 +86,8 @@ button {
 }
 
 h2 {
-    font-size: 30px;
-    line-height: 35px;
+    @include adaptiv-value('font-size', 30, 19, 1);
+    @include adaptiv-value('line-height', 35, 10, 0);
     color: $darkcolor;
 }
 

@@ -31,10 +31,17 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
+    @media (max-width: 950px) {
+        display: block;
+    }
     .offer-links {
         display: flex;
         align-items: center;
         gap: 45px;
+        @media (max-width: 950px) {
+            margin-bottom: 20px;
+            justify-content: center;
+        }
         .offer-link {
             font-weight: bold;
             font-size: 30px;
@@ -55,6 +62,18 @@
         background-color: $lightgreen;
         padding: 20px 75px;
         clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 0 54%);
+        @media (max-width: 950px) {
+            clip-path: polygon(3% 0, 97% 0, 100% 50%, 97% 100%, 3% 100%, 0% 50%);
+            display: block;
+            margin: 0 auto;
+            max-width: 70%;
+            text-align: center;
+            padding: 20px 10px;
+        }
+        @media (max-width: $md3) {
+            clip-path: none;
+            border-radius: 5px;
+        }
         p {
             font-weight: bold;
             line-height: 19px;
@@ -74,7 +93,7 @@
 .offers-grid {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 30px;
     .offers-grid__item {
         .hot-item {

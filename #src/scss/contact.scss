@@ -8,6 +8,15 @@
             max-width: 210px;
             .contact-aside__block {
                 margin: 20px 0;
+                .contact-socials {
+                    justify-content: unset;
+                    gap: 15px;
+                    a {
+                        path {
+                            fill: $darkgreen;
+                        }
+                    }
+                }
                 h2 {
                     font-weight: 700;
                 }
@@ -41,7 +50,7 @@
         }
         .contact-form {
             display: block;
-            width: 600px;
+            width: 60%;
             h2 {
                 margin-bottom: 37px;
             }
@@ -56,8 +65,13 @@
                     font-family: inherit;
                     padding: 15px 20px;
                     border: 1px solid #999191;
+                    outline: none;
+                    transition: outline .3s;
                     &:nth-child(3n + 1) {
                         grid-column: 2 span;
+                    }
+                    &:focus {
+                        outline: 1px solid #999191;
                     }
                 }
                 textarea {

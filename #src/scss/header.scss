@@ -93,6 +93,9 @@ header {
                         line-height: 26px;
                         color: #FFFFFF;
                         font-feature-settings: 'pnum' on, 'lnum' on;
+                        @media (max-width: $md4) {
+                            font-size: 18px;
+                        }
                     }
                 }
                 .accent-btn {
@@ -103,6 +106,11 @@ header {
                     font-size: 16px;
                     line-height: 19px;
                     color: #FFFFFF;
+                    text-align: center;
+                    @media (max-width: $md4) {
+                        max-width: 130px;
+                        padding: 10px 0;
+                    }
                 }
             }
         }
