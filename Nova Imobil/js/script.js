@@ -1,4 +1,5 @@
 var swiper = new Swiper(".mainSwiper", {
+    effect: 'fade',
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -7,8 +8,6 @@ var swiper = new Swiper(".mainSwiper", {
 
 const serviceBtn = document.querySelectorAll('.services-btn')
 const serviceModal = document.querySelector('.services-details')
-
-
 
 if (serviceModal) {
     serviceBtn.forEach(serviceBtn => {
@@ -31,29 +30,31 @@ const counters = document.querySelectorAll('.statistics-counter');
 const statistics = document.querySelector('.statistics')
 const speed = 100;
 
-window.addEventListener('scroll', () => {
-    const statisticPos = statistics.offsetTop;
-    const scrollPos = window.scrollY;
+if (statistics) {
+    window.addEventListener('scroll', () => {
+        const statisticPos = statistics.offsetTop;
+        const scrollPos = window.scrollY;
 
-    if (scrollPos >= statisticPos - 300) {
-        counters.forEach(counter => {
-            const animate = () => {
-                const value = +counter.getAttribute('akhi');
-                const data = +counter.innerText;
+        if (scrollPos >= statisticPos - 300) {
+            counters.forEach(counter => {
+                const animate = () => {
+                    const value = +counter.getAttribute('akhi');
+                    const data = +counter.innerText;
 
-                const time = value / speed;
-                if (data < value) {
-                    counter.innerText = Math.ceil(data + time);
-                    setTimeout(animate, 1);
-                } else {
-                    counter.innerText = value;
+                    const time = value / speed;
+                    if (data < value) {
+                        counter.innerText = Math.ceil(data + time);
+                        setTimeout(animate, 1);
+                    } else {
+                        counter.innerText = value;
+                    }
+
                 }
-
-            }
-            animate();
-        });
-    }
-});
+                animate();
+            });
+        }
+    });
+}
 
 const headerLeft = document.querySelector('.upper-header__left');
 const headerNav = document.querySelector('.header-nav');
@@ -91,14 +92,14 @@ const burger = document.querySelector('.burger')
 burger.addEventListener('click', () => {
     burger.classList.toggle('active')
     headerNav.classList.toggle('active')
+    document.body.classList.toggle('lock')
 
-
-    window.addEventListener("click", function(event) {
-        if (event.target != burger || event.target != headerNav) {
-            burger.classList.remove("active")
-            headerNav.classList.remove("active");
-        }
-    })
+    // window.addEventListener("click", function(event) {
+    //     if (event.target != burger || event.target != headerNav) {
+    //         burger.classList.remove("active")
+    //         headerNav.classList.remove("active");
+    //     }
+    // })
 })
 
 const filterItemControl = document.querySelectorAll('.filter-item__title')

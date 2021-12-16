@@ -5,6 +5,9 @@
         grid-template-columns: repeat(4, 1fr);
         border: 0.5px solid $maincolor;
         border-radius: 15px;
+        @media (max-width: $md4) {
+            grid-template-columns: repeat(2, 1fr);
+        }
         .filter-item {
             position: relative;
             border-bottom: 0.5px solid $maincolor;
@@ -24,6 +27,24 @@
             &:nth-child(4n+4) {
                 &::after {
                     display: none;
+                }
+            }
+            @media (max-width: $md4) {
+                &:nth-child(n+5) {
+                    border-bottom: 0.5px solid $maincolor;
+                }
+                &:nth-child(n+7) {
+                    border: none;
+                }
+                &:nth-child(0n+2) {
+                    &::after {
+                        display: none;
+                    }
+                }
+                &:nth-child(3n+6) {
+                    &::after {
+                        display: none;
+                    }
                 }
             }
             .filter-item__title {

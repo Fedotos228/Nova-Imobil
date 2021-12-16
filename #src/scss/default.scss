@@ -8,11 +8,12 @@ $lightgreen: #30D5C8;
 // MAIN FONT/COLORS
 // CONTAINER
 $minwidth: 320px;
-$mw: 1050px;
+$mw: 1140;
 $md1: $mw+12;
 $md2: 992.98px;
 $md3: 767.98px;
-$md4: 479.98px;
+$md4: 640px;
+$md5: 479.98px;
 // CONTAINER
 // Global Commands
 *,
@@ -28,6 +29,7 @@ body {
     font-size: $mainsize;
     color: $maincolor;
     overflow-x: hidden;
+    font-feature-settings: 'pnum' on, 'lnum' on;
     &.lock {
         overflow: hidden;
     }
@@ -40,10 +42,18 @@ body {
 }
 
 .container {
-    max-width: $mw;
+    max-width: $mw+px;
     margin: 0 auto;
     width: 100%;
-    @media(max-width: $mw) {
+    padding: 0 10px;
+    @media (max-width: $md1) {
+        max-width: 970px;
+    }
+    @media (max-width: $md2) {
+        max-width: 750px;
+    }
+    @media (max-width: $md3) {
+        max-width: none;
         padding: 0 15px;
     }
 }
@@ -86,8 +96,8 @@ button {
 }
 
 h2 {
-    @include adaptiv-value('font-size', 30, 19, 1);
-    @include adaptiv-value('line-height', 35, 10, 0);
+    font-size: 30px;
+    line-height: 35px;
     color: $darkcolor;
 }
 

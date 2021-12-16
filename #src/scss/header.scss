@@ -65,12 +65,13 @@ header {
                         &:not(:last-child) {
                             padding-right: 4px;
                             border-right: 1px solid #FFFFFF;
+                            @media (max-width: $md3) {}
                         }
                     }
                 }
-                // @media (max-width: $md3) {
-                //     display: block;
-                // }
+                &.done {
+                    margin-top: 20px;
+                }
             }
             .upper-header__right {
                 display: flex;
@@ -93,9 +94,6 @@ header {
                         line-height: 26px;
                         color: #FFFFFF;
                         font-feature-settings: 'pnum' on, 'lnum' on;
-                        @media (max-width: $md4) {
-                            font-size: 18px;
-                        }
                     }
                 }
                 .accent-btn {
@@ -106,10 +104,11 @@ header {
                     font-size: 16px;
                     line-height: 19px;
                     color: #FFFFFF;
-                    text-align: center;
-                    @media (max-width: $md4) {
-                        max-width: 130px;
-                        padding: 10px 0;
+                    @media (max-width: $md5) {
+                        font-size: 14px;
+                        padding: 12px 0;
+                        width: 40%;
+                        text-align: center;
                     }
                 }
             }
@@ -141,9 +140,18 @@ header {
                     padding-top: 100px;
                     padding-left: 30px;
                     transition: .3s;
+                    overflow: scroll;
                     &.active {
                         right: 0;
                     }
+                }
+                @media (max-width: $md3) {
+                    right: -70%;
+                    width: 70%;
+                }
+                @media (max-width: $md5) {
+                    right: -80%;
+                    width: 80%;
                 }
                 .header-nav__list {
                     display: flex;
@@ -189,6 +197,12 @@ header {
                                     line-height: 15px;
                                     color: $maincolor;
                                 }
+                            }
+                            @media (max-width: $md2) {
+                                position: unset;
+                                visibility: visible;
+                                opacity: 1;
+                                display: block;
                             }
                         }
                         &:hover {

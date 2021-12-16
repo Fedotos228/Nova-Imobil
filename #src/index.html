@@ -13,22 +13,26 @@
 
     @@include('components/_header.html')
 
-    <section class="intro" style="background: url(./img/main-slider1.jpg) 50% 50% / cover no-repeat;">
+    <section class="intro">
         <div class="swiper mainSwiper">
-            <div class="swiper-wrapper container">
-                <div class="swiper-slide">
-                    <h2>Nova Imobil îți oferă spații locative și comerciale</h2>
-                    <p>
-                        Noi îți oferim calitate, accesibilitate și libertate. La procurarea sau închirierea unui apartament de către clienții noi, oferim 10% reducere la prima achitare.
-                    </p>
-                    <a class="green-btn" href="#">VEZI OFERTELE</a>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background: url(./img/main-slider1.jpg) 50% 50% / cover no-repeat;">
+                    <div class="container">
+                        <h2>Nova Imobil îți oferă spații locative</h2>
+                        <p>
+                            Noi îți oferim calitate, accesibilitate și libertate. La procurarea sau închirierea unui apartament de către clienții noi, oferim 10% reducere la prima achitare.
+                        </p>
+                        <a class="green-btn" href="more-offers.html">VEZI OFERTELE</a>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <h2>Nova Imobil îți oferă spații locative și comerciale</h2>
-                    <p>
-                        Noi îți oferim calitate, accesibilitate și libertate. La procurarea sau închirierea unui apartament de către clienții noi, oferim 10% reducere la prima achitare.
-                    </p>
-                    <a class="green-btn" href="#">VEZI OFERTELE</a>
+                <div class="swiper-slide" style="background: url(./img/main-slider1.jpg) 50% 50% / cover no-repeat;">
+                    <div class="container">
+                        <h2>Nova Imobil îți oferă spații locative și comerciale</h2>
+                        <p>
+                            Noi îți oferim calitate, accesibilitate și libertate. Unui apartament de către clienții noi, oferim 10% reducere la prima achitare.
+                        </p>
+                        <a class="green-btn" href="#">VEZI OFERTELE</a>
+                    </div>
                 </div>
             </div>
             <div class="main-swiper__arrows swiper-button-next"></div>
@@ -263,10 +267,11 @@
                     </div>
 
                 </div>
-                <a class="green-btn view-more" href="">VEZI TOATE OFERTELE</a>
+                <a class="green-btn view-more" href="more-offers.html">VEZI TOATE OFERTELE</a>
             </div>
         </div>
     </section>
+
     <section class="services">
         <div class="container">
             @@include('components/services-details.html')
@@ -418,6 +423,7 @@
             </div>
         </div>
     </section>
+
     <section class="statistics" style="background: url('../img/statistics.jpg') 50% 50% / cover, no-repeat">
         <div class="container">
             <h3>FII MAI APROAPE DE NOI</h3>
@@ -442,7 +448,7 @@
         </div>
     </section>
 
-    <!-- @@include('components/_footer.html') -->
+    @@include('components/_footer.html')
 
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

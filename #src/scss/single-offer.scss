@@ -3,6 +3,18 @@
     .offer-header {
         display: flex;
         gap: 30px;
+        @media (max-width: $md2) {
+            justify-content: center;
+            flex-direction: column;
+        }
+        &__image {
+            width: 510px;
+            height: 590px;
+            @media (max-width: $md4) {
+                width: 100%;
+                height: auto;
+            }
+        }
         &__details {
             h4 {
                 font-weight: bold;
@@ -80,6 +92,7 @@
                         font-size: 15px;
                         line-height: 18px;
                         letter-spacing: 0.05em;
+                        color: #FFFFFF;
                     }
                 }
             }

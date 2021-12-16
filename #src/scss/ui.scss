@@ -31,15 +31,17 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
-    @media (max-width: 950px) {
-        display: block;
+    gap: 20px;
+    @media (max-width: $md2) {
+        flex-direction: column;
     }
     .offer-links {
         display: flex;
         align-items: center;
         gap: 45px;
-        @media (max-width: 950px) {
-            margin-bottom: 20px;
+        @media (max-width: $md4) {
+            flex-wrap: wrap;
+            gap: 20px;
             justify-content: center;
         }
         .offer-link {
@@ -62,17 +64,15 @@
         background-color: $lightgreen;
         padding: 20px 75px;
         clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 0 54%);
-        @media (max-width: 950px) {
-            clip-path: polygon(3% 0, 97% 0, 100% 50%, 97% 100%, 3% 100%, 0% 50%);
-            display: block;
-            margin: 0 auto;
-            max-width: 70%;
-            text-align: center;
-            padding: 20px 10px;
-        }
-        @media (max-width: $md3) {
+        @media (max-width: $md2) {
             clip-path: none;
-            border-radius: 5px;
+            padding: 20px 40px;
+            max-width: 85%;
+            width: 100%;
+            text-align: center;
+        }
+        @media (max-width: $md4) {
+            max-width: 100%;
         }
         p {
             font-weight: bold;
@@ -88,14 +88,37 @@
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+    @media (max-width: $md3) {
+        margin-top: 15px;
+        justify-content: stretch;
+        a {
+            path {
+                fill: $darkgreen;
+            }
+        }
+    }
 }
 
 .offers-grid {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    @media (max-width: $md2) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: $md3) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $md5) {
+        grid-template-columns: repeat(1, 1fr);
+    }
     .offers-grid__item {
+        position: relative;
+        @media (max-width: $md5) {
+            width: 80%;
+            margin: 0 auto;
+        }
         .hot-item {
             width: 70px;
             height: 35px;
@@ -184,10 +207,27 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 35px 30px;
+    @media (max-width: $md2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $md4) {
+        grid-template-columns: repeat(1, 1fr);
+    }
     .services-grid__block {
         text-align: center;
+        height: 100%;
+        width: 100%;
+        @media (max-width: $md4) {
+            max-width: 85%;
+            margin: 0 auto;
+        }
+        @media (max-width: $md5) {
+            max-width: 100%;
+        }
         svg {
             margin-bottom: 15px;
+            width: 40px;
+            height: 40px;
         }
         h3 {
             font-weight: bold;
@@ -207,7 +247,7 @@
         .services-btn {
             width: 150px;
             margin: 0 auto;
-            padding: 10px 50px;
+            padding: 10px 0;
         }
     }
 }

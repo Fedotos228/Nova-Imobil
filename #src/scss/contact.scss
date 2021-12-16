@@ -1,48 +1,74 @@
 .contact {
-    max-width: 960px;
     margin: 50px auto;
+    .contact-container {
+        max-width: 960px;
+    }
     .contact-body {
         display: flex;
         justify-content: space-between;
+        @media (max-width: $md3) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         .contact-aside {
             max-width: 210px;
-            .contact-aside__block {
-                margin: 20px 0;
-                .contact-socials {
-                    justify-content: unset;
-                    gap: 15px;
-                    a {
-                        path {
-                            fill: $darkgreen;
+            @media (max-width: $md3) {
+                max-width: 100%;
+            }
+            h2 {
+                font-weight: 700;
+                @media (max-width: $md3) {
+                    text-align: center;
+                }
+            }
+            .contact-aside__blocks {
+                @media (max-width: $md3) {
+                    display: flex;
+                    gap: 30px;
+                    margin-bottom: 30px;
+                }
+                .contact-aside__block {
+                    margin: 20px 0;
+                    &:nth-child(1) {
+                        @media (max-width: $md3) {
+                            order: 1;
                         }
                     }
-                }
-                h2 {
-                    font-weight: 700;
-                }
-                h4 {
-                    font-weight: bold;
-                    font-size: 15px;
-                    line-height: 18px;
-                    color: $maincolor;
-                    margin-bottom: 10px;
-                }
-                address,
-                p {
-                    font-weight: 400;
-                    font-size: 14px;
-                    line-height: 15px;
-                    color: $maincolor;
-                }
-                p {
-                    &:not(:last-child) {
+                    .contact-socials {
+                        justify-content: unset;
+                        gap: 15px;
+                        margin: 0;
+                        a {
+                            path {
+                                fill: $darkgreen;
+                            }
+                        }
+                    }
+                    h4 {
+                        font-weight: bold;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: $maincolor;
                         margin-bottom: 10px;
                     }
-                }
-                .contact-socials {
-                    a {
-                        svg {
-                            fill: $darkgreen;
+                    address,
+                    p {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 15px;
+                        color: $maincolor;
+                    }
+                    p {
+                        &:not(:last-child) {
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .contact-socials {
+                        a {
+                            svg {
+                                fill: $darkgreen;
+                            }
                         }
                     }
                 }
@@ -51,8 +77,14 @@
         .contact-form {
             display: block;
             width: 60%;
+            @media (max-width: $md3) {
+                width: 100%;
+            }
             h2 {
                 margin-bottom: 37px;
+                @media (max-width: $md3) {
+                    text-align: center;
+                }
             }
             form {
                 display: grid;
@@ -69,6 +101,11 @@
                     transition: outline .3s;
                     &:nth-child(3n + 1) {
                         grid-column: 2 span;
+                    }
+                    @media (max-width: $md4) {
+                        &:nth-child(1n + 2) {
+                            grid-column: 2 span;
+                        }
                     }
                     &:focus {
                         outline: 1px solid #999191;

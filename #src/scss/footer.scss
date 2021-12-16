@@ -4,8 +4,15 @@ footer {
     .footer-body {
         display: flex;
         justify-content: space-between;
+        @media (max-width: $md2) {
+            flex-direction: column;
+            align-items: center;
+        }
         .footer-logo {
             height: fit-content;
+            @media (max-width: $md2) {
+                margin-bottom: 30px;
+            }
         }
         .footer-title {
             font-weight: bold;
@@ -18,16 +25,26 @@ footer {
             display: flex;
             justify-content: space-between;
             gap: 75px;
+            @media (max-width: $md2) {
+                flex-direction: column;
+                text-align: center;
+                gap: 0;
+            }
             .footer-column {
+                @media (max-width: $md2) {
+                    margin-bottom: 50px;
+                }
                 &__list {
                     .footer-list__item {
                         max-width: 285px;
                         &:not(:last-child) {
-                            margin-bottom: 8px;
+                            margin-bottom: 15px;
                         }
-                        a {
+                        a,
+                        address {
                             font-size: 18px;
                             line-height: 21px;
+                            font-style: normal;
                             color: #FFFFFF;
                         }
                     }
